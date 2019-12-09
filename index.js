@@ -316,22 +316,20 @@ function counterMaker() {
 */
 
 function counterMakerWithLimit(max) {
+  
   var counter = 0;
-
-     return function() {
-
-      if(counter < max) {
-
-        return counter++
-      } else {
-
-        return counter = 0;
-      
-      }
-      
-                                                                                                                                                                                                      
-     }
-}
+       return function() {
+  
+        if(counter <= max ) {
+  
+          return counter++
+        } else {
+          counter = 1;
+          return 0;
+        
+        }               
+       }
+  }
 
 /////////////// END OF CHALLENGE ///////////////
 /////////////// END OF CHALLENGE ///////////////
